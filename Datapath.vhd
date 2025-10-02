@@ -13,7 +13,7 @@ end entity;
 
 architecture rtl of datapath is
 
-  -- 4-to-1 8-bit mux component (assumed to exist)
+  -- 4-to-1 8-bit mux component
   component eightbitfourtoonemux
     port(
       w0 : in  std_logic_vector(7 downto 0);
@@ -26,7 +26,7 @@ architecture rtl of datapath is
     );
   end component;
 
-  -- 8-bit shift-register (structural) component (assumed to exist)
+  -- 8-bit shift-register (structural) component
   component eightBitShiftRegisterStructural
     port(
       i_resetBar  : in  std_logic;
@@ -98,5 +98,6 @@ begin
       i_Value      => RMASK_INIT,
       o_Value      => int_rMaskOut
     );
+
 
 end architecture;
